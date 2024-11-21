@@ -11,7 +11,14 @@ class Conexion{
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ 
         ];
 
-        $dsn = "mysql:host=localhost;dbname=PlantasCaribe;charset=utf8mb4";   
+        / Cambia estos valores para tu servidor remoto
+        $host = "192.168.0.1"; // Ejemplo: 192.168.1.100 o example.com
+        $dbname = "PlantasCaribe"; // Nombre de tu base de datos
+        $username = "root"; // Usuario de tu base de datos en el servidor remoto
+        $password = ""; // Contraseña del usuario
+        $charset = "utf8mb4"; // Codificación
+
+        $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";    
         
         try {
            
